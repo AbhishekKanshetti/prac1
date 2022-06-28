@@ -1,26 +1,40 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Enter the Limit of Fibonacci Series</h1>
-        Enter the Number:<input type="text" name="n1"/><br/>
-        <h1>The Value of Fibonacci Series</h1>
-        <h1>
-        <%
-            String s=request.getParameter("n1");
-            int n=Integer.parseInt(s);
-            int i=1,f1=0,f2=1,f3;
-            while(i<=n)
-            {
-              out.println(f1);
-              f3=f1+f2;
-              f1=f2;
-              f2=f3;
-              i=i+1; 
-            }
-        %>
-        </h1>
-    </body>
+<head><title>FIBONACCI SERIES IN JSP</title></head>
+<body>
+<form method="get">
+<h3> Enter the number of terms you want:
+<input type="text" name="limit">
+</h3>
+</form>
+<h3>
+<%
+ String s = request.getParameter("limit");
+ if (s != null) {
+%>
+<%@ page import = "java.io.*" %>
+<%@ page import = "java.lang.*" %>
+<%
+    int n=0;
+    n=Integer.parseInt(s);
+   out.println("No of terms to be printed is  "+n);
+%>
+<br>
+<br>
+<br>
+The series generated are listed below :<br><br>
+<%
+    int a=1;
+    int b=1;
+   out.println(""+a+",\t"+b+",\t");
+  for(int i=3;i<= n;i++)
+{
+    int c=a+b;
+   out.print(""+c+",\t");
+  a=b;
+ b=c;
+}
+}
+%>
+</h3>
+</body>
 </html>
