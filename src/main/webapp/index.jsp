@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -6,19 +5,7 @@
     </head>
     <body>
         <h1>Enter the Limit of Fibonacci Series</h1>
-        <form action="index.jsp">
-            Enter the Number:<input type="text" name="n1"/><br/>
-            <input type="submit" value="Enter"/>         
-        </form>
-    </body>
-</html>
-
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+        Enter the Number:<input type="text" name="n1"/><br/>
         <h1>The Value of Fibonacci Series</h1>
         <h1>
         <%
